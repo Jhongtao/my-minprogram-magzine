@@ -1,0 +1,6 @@
+<!--components/comAdd/com.wxml-->
+<!-- <text>components/comAdd/com.wxml</text> -->
+<view class="container" bind:tap="onTap">
+<text class="more {{selected?'active':''}}">订阅</text>
+</view>
+

@@ -1,0 +1,30 @@
+<!--pages/options/options.wxml-->
+<!-- <text>pages/options/options.wxml</text> -->
+<view class="container">
+<search-com value="{{value}}"></search-com>
+ <view class='title-name'>
+ <text class="name">我的杂志</text>
+ <text class="control">管理杂志</text>
+ </view>
+ <view class="tag-list">
+ <marktype-list-com mark-type-list="{{markTypeList}}">
+        <view slot="first" >
+            <add-com></add-com>
+        </view>
+        <!-- <view slot="last" hidden="{{magazineId !== 0}}" catch:tap="onOption">
+            <next-com></next-com>
+        </view> -->
+</marktype-list-com>
+ </view>
+
+ <view class="option-list">
+   <view class="option" wx:for="{{tagOptionList}}" wx:key="" wx:for-item="list">
+      <view class="option-name" >{{list.title}}></view>
+      <view class="list" wx:for="{{list.tagList}}" wx:key="" wx:for-item="tag">
+         <text class="option-tag">#{{tag.tag}}</text>
+         <subscribe-com selected="{{tag.selected}}" class="subscribe" data-title="{{list.title}}" tag-id="{{tag.tagId}}" bindselected="onTapSelected"></subscribe-com>
+      </view>
+   </view>
+ </view>
+
+</view>

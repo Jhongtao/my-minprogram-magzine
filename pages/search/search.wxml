@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<view class="container">
+
+     <search-com value="{{value}}"></search-com>
+    <view class="search-header">
+        <text class="title">#{{searchArticleRecommend.tag}}></text>
+        <text class="context" wx:for="{{searchArticleRecommend.recommend}}" wx:key="*this">{{item}}</text>
+    </view>
+    <scroll-view 
+    scroll-y
+    bindscrolltolower="onTapBottom"
+    class="article-list" >
+        <article-list-com
+        more-article="{{moreArticle}}" 
+        type="{{type}}"
+        search-word="{{value}}"
+        article-list="{{searchArticleList}}"></article-list-com>
+    </scroll-view>
+
+</view>

@@ -1,0 +1,5 @@
+<!--components/comTag/com.wxml-->
+<!-- <text>components/comTag/com.wxml</text> -->
+<view class="container">
+      <text data-id="{{tagId}}" bindtap="onLinkto" class="text">{{tag}}</text>
+</view>

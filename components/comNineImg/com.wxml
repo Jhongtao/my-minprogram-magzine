@@ -1,0 +1,9 @@
+<!--components/comNineImg/com.wxml-->
+<!-- <text>components/comNineImg/com.wxml</text> -->
+<view class="comtainer">
+    <view class="title">{{mainTitle}}</view>
+    <view class="image-contain">
+        <image catch:tap="imgShow" wx:if="{{index < 9}}" class="image" wx:key="" wx:for="{{imgSrc}}" src="{{item}}" data-index="{{index}}"/>
+        <text class="img-num"  wx:if="{{imgNum > 9}}">+{{imgNum}}</text>
+    </view>
+</view>

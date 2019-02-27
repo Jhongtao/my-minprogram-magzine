@@ -1,0 +1,6 @@
+<!--components/comText/com.wxml-->
+<!-- <text>components/comText/com.wxml</text> -->
+<view class="container">
+  <view class="main-title">{{mainTitle}}</view>
+  <view class="sub-title">{{subTitle}}</view>
+</view>

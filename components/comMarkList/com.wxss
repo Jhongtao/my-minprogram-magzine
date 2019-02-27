@@ -1,0 +1,12 @@
+/* components/comMarkList/com.wxss */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.tag-list{
+    display:block;
+    margin:20rpx 10rpx;
+}

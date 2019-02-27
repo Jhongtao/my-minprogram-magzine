@@ -1,0 +1,11 @@
+<!--components/comLoading/com.wxml-->
+<!-- <text>components/comLoading/com.wxml</text> -->
+  <view class="loading">
+      <block wx:if="{{run}}">
+       <view class='circle'></view>
+       <view class='circle'></view>
+      </block>
+   <block wx:else>
+       <view class="circle1"></view>
+   </block>
+  </view>

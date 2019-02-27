@@ -1,0 +1,6 @@
+<!--components/comNext/com.wxml-->
+<!-- <text>components/comNext/com.wxml</text> -->
+<view class="container">
+<text class="more">●●●</text>
+</view>
+

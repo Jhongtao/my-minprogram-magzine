@@ -1,0 +1,21 @@
+<!--components/recommendInfo/com.wxml-->
+<!-- <text>components/recommendInfo/com.wxml</text> -->
+<view class="container">
+<view class='weater' wx:if="{{!weaterBtn && magazineId==0}}">
+ <text class="weater" decode="{{true}}">省份:{{weater.cityInfo.parent}}城市:{{weater.cityInfo.city}}
+ 最高温:{{weater.data.forecast[0].high}}最低温:{{weater.data.forecast[0].low}}
+ 注意:{{weater.data.forecast[0].notice}}
+ 日期:{{weater.data.forecast[0].ymd}}星期:{{weater.data.forecast[0].week}}
+ pm25:{{weater.data.pm25}}空气质量:{{weater.data.quality}}</text>
+</view>
+ <button open-type="getUserInfo" wx:if="{{weaterBtn}}">获取天气信息</button>
+    <view class="main-title">
+        <text class="text" decode="{{true}}">{{dateTitle}}</text>
+    </view>
+    <text class="title" >{{recommendInfo.title}}</text>
+    <image class="image" mode="widthFix" bindload="imgLoaded"  src="{{recommendInfo.imgSrc}}" hidden="{{imgLoading}}"/>
+    <view class="seat" hidden="{{!imgLodading}}">
+        <loading-com run="{{false}}"></loading-com>
+    </view>
+    
+</view>

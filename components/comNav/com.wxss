@@ -1,0 +1,18 @@
+/* components/comNav/com.wxss */
+.container{
+    /* box-sizing: border-box; */
+    background-color: #fff;
+    width: 750rpx;
+    height: 80rpx;
+}
+.nav-option{
+    white-space: nowrap;
+    color: rgb(143, 131, 131);
+    /* border-right: 1px solid rgb(143, 131, 131); */
+    padding:10rpx 28rpx;
+    font-size:50rpx;
+    font-weight: 700;
+}
+.nav-option.active{
+    color:#000;
+}

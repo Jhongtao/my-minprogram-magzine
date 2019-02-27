@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mark-article-com":"/components/comArticle/com",
+    "btn-com":"/components/comBtn/com"
+  }
+}

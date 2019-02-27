@@ -1,0 +1,6 @@
+<!--components/comAdd/com.wxml-->
+<!-- <text>components/comAdd/com.wxml</text> -->
+<view class="container">
+<text class="more">+</text>
+</view>
+

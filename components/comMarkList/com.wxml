@@ -1,0 +1,8 @@
+<!--components/comMarkList/com.wxml-->
+<!-- <text>components/comMarkList/com.wxml</text> -->
+<view class='container'>
+    <slot name="first"></slot>
+  <tag-com class="tag-list" wx:for="{{markTypeList}}" tag="{{item.type}}" tag-id="{{item.typeId}}" wx:key="item.typeId">
+  </tag-com>
+     <slot name="last"></slot>
+</view>

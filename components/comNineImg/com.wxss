@@ -1,0 +1,29 @@
+/* components/comNineImg/com.wxss */
+.title{
+    font-size:25rpx;
+    text-indent: 2em;
+    margin-bottom: 10rpx;
+}
+
+.image-contain{
+    width:710rpx;
+    height:710rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+.image{
+    width: 31%;
+    height: 31%;
+}
+.img-num{
+    position: absolute;
+    font-size: 26rpx;
+    background: rgba(65, 64, 64,.6);
+    color:#fff;
+    right: 100rpx;
+    bottom:100rpx;
+    padding:2px;
+}

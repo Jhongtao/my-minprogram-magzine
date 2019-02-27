@@ -1,0 +1,45 @@
+/* components/recommendInfo/com.wxss */
+.container{
+    margin:20rpx 0rpx;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.main-title{
+    margin-bottom: 20rpx;
+    position: relative;
+    padding: 20rpx;
+    text-align: left;
+}
+.main-title::after{
+    content:'';
+    display:block;
+    width: 160rpx;
+    border-bottom: 2px solid #777;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%)
+}
+.text{
+    font-size:45rpx;
+    font-weight: 700;
+    letter-spacing:0.4em;
+    padding-left: 0.4em;
+}
+.title{
+    font-size: 35rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+}
+.image,.seat{
+    width: 100%;
+}
+.seat{
+    height:700rpx;
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

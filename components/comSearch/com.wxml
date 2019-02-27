@@ -1,0 +1,5 @@
+<!--components/search/com.wxml-->
+<!-- <text>components/search/com.wxml</text> -->
+ <view class="search">
+<input id="search" type="text" class="inp-search" bindblur="onBlur" bindconfirm="onTap" value="{{value}}" placeholder="青芒什么都有"/>  <label for="search" bind:tap="onTap" class="text-sec">搜索</label> 
+ </view>

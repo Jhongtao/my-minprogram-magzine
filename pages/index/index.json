@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "nav-com":"/components/comNav/com",
+    "article-com":"/components/comArticle/com",
+    "recommend-info-com":"/components/comRecommendInfo/com",
+    "marktype-list-com":"/components/comMarkList/com",
+    "loading-com":"/components/comLoading/com",
+    "add-com":"/components/comAdd/com",
+    "next-com":"/components/comNext/com"
+
+  }
+}

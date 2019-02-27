@@ -1,0 +1,12 @@
+/* components/comBtn/com.wxss */
+.container{
+
+}
+
+.btn{
+    background-color:transparent;
+    padding: 0;
+}
+.btn::after{
+    border:none;
+}

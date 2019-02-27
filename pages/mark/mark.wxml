@@ -1,0 +1,29 @@
+<!--pages/mark/mark.wxml-->
+<!-- <text>pages/mark/mark.wxml</text> -->
+<view class="container">
+  <view class="user-info">
+     <text class="user-name">{{userInfo.nickName}}</text>
+     <view class="user-logo" wx:if="{{accredit}}" >
+      <image class="image"
+      src="{{userInfo.avatarUrl}}"
+       />
+     </view>
+       <view wx:else>
+       <btn-com class="img-user" open-type="getUserInfo" catch:getinfo="onGetInfo">
+           <image class="image" src="/image/icon/Icon_login.png" />
+       </btn-com>
+     </view>
+     
+  </view>
+  <view class="share">
+    <btn-com  class="share-icon" open-type="share">
+    <view class="img-share">
+        <image class="img-share" src="/image/icon/Icon_relay.png" />
+    </view>
+    </btn-com>
+  </view>
+
+  <view class="mark-list">
+  <mark-article-com article-list="{{markArticleList}}"></mark-article-com>
+  </view>
+</view>

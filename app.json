@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/options/options",
+    "pages/search/search",
+    "pages/mark/mark"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Rebuild-My-Magazine",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#020305",
+    "selectedColor": "#654265",
+    "list": [
+      {
+        "pagePath": "pages/options/options",
+        "text": "目录",
+        "iconPath": "image/icon/Icon_catalog.png",
+        "selectedIconPath": "image/icon/Icon_catalog_fill.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "杂志",
+        "iconPath": "image/icon/Icon_magazine.png",
+        "selectedIconPath": "image/icon/Icon_magazine_open.png"
+      },
+      {
+        "pagePath": "pages/mark/mark",
+        "text": "马克",
+        "iconPath": "image/icon/Icon_circle.png",
+        "selectedIconPath": "image/icon/Icon_circle_fill.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+<!--components/comBtn/com.wxml-->
+<!-- <text>components/comBtn/com.wxml</text> -->
+<view class="container">
+    <button class="btn" 
+    open-type="{{openType}}" 
+    bindgetuserinfo="onUserInfo">
+    <slot></slot>
+    </button>
+</view>

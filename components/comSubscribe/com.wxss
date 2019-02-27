@@ -1,0 +1,15 @@
+/* components/comMore/com.wxss */
+.container{
+    /* width: 50rpx;
+    height:50rpx; */
+}
+.more{
+    padding: 0 10rpx;
+    font-weight: 700;
+
+
+}
+.more.active{
+    background-color:#000;
+    color:#fff;
+}
