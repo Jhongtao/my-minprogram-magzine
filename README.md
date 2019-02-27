@@ -1,0 +1,2 @@
+# my-minprogram-magzine
+minprogram
