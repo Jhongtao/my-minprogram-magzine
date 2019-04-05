@@ -1,0 +1,22 @@
+/* page/page2/page2.wxss */
+.contain{
+    padding: 0 20rpx;
+}
+.pic-con{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+ .article{
+    width: 18em;
+    padding: 30rpx 0;
+    font-size: 40rpx;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    font-weight: 600;
+    
+}
+.author{
+    text-align:right;
+}

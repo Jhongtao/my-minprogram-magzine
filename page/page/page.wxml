@@ -1,0 +1,11 @@
+<!--page/page/page.wxml-->
+<!-- <text>page/page/page.wxml</text> -->
+<view class='demo'>
+    <image src="/img/gebg.jpg"/>
+    <text class="name" decode="true" space="ensp">J   &nbsp;  H     T</text>
+    <text class="contain" catch:tap="enterpage">enter my min program</text>
+</view>
+<view hover-class="cab" class="cesi">
+    <view hover-stop-propagation="true" hover-strat-time="500" hover-stay-time="400" hover-class="cab1" class="cesi1"></view>
+</view>
+

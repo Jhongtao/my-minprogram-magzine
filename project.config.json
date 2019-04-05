@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
+	"libVersion": "2.4.2",
 	"appid": "wx6b17859a7d44f515",
-	"projectname": "rebulid-firstDemo",
+	"projectname": "firstDem",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -41,10 +41,10 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "search",
-					"pathName": "pages/search/search",
-					"query": "searchUrl=读书",
-					"scene": null
+					"name": "detial",
+					"pathName": "page/pagedetail/detail",
+					"query": "id=11",
+					"scene": "1001"
 				}
 			]
 		}

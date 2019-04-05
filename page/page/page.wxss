@@ -1,0 +1,76 @@
+/* page/page/page.wxss */
+/* 小程序单位rpx 750*1334 */
+page{
+    background: #00ba4d;
+    font-size:50rpx;
+}
+.demo{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    color:#502;
+    padding-top:20%;
+}
+image{
+    width: 300rpx;
+    height: 300rpx;
+    border-radius:50%;
+}
+.name{
+    font-size:1em;
+    font-weight:600;
+    margin-top:10%;
+    /* letter-spacing:1em;
+    padding-left: 1em;
+    text-align: center; */
+}
+.contain{
+    font-size:1em;
+    margin-top:5%;
+    text-transform: capitalize;
+    border:1px solid #502;
+}
+.cesi{
+    width:200rpx;
+    height:200rpx;
+    background: rgb(134, 110, 134);
+}
+.cesi1{
+    width:100rpx;
+    height:100rpx;
+    background: rgb(101, 114, 233);
+}
+.cab{
+    background: darkmagenta;
+}
+.cab1{
+    background: rgb(6, 55, 218);
+}
+/* @media screen and (min-width:700px){
+
+    image{
+        width: 120px;
+        height: 120px;
+    }
+    .name{
+        font-size:22px;
+
+    }
+    .contain{
+        font-size:16px;
+    }
+}
+@media screen and (min-width:1000px){
+
+    image{
+        width: 160px;
+        height: 160px;
+    }
+    .name{
+        font-size:25px;
+
+    }
+    .contain{
+        font-size:18px;
+    }
+} */

@@ -1,5 +1,0 @@
-<!--components/comMore/com.wxml-->
-<!-- <text>components/comMore/com.wxml</text> -->
-<view class="container">
-<text catchtap="onShowMore" class="more">●●●</text>
-</view>

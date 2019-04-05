@@ -1,0 +1,52 @@
+<!--page/type/type.wxml-->
+<!-- <text>page/type/type.wxml</text> -->
+<view class="mag-container">
+    <!-- <view class="recommend-title">
+      <text class="title-date">{{recommend.date}}</text>
+      <text class="title-contain">{{recommend.title}}</text>
+    </view> -->
+    <view class="pic">
+        <image  src="{{articleTitle.imgSrc}}" />
+    </view>
+    <view class="mag-title">
+         <text >{{articleTitle.title}}</text>
+         <view>
+         <image mode="widthFix" src="/image/icon/Icon_relay.png" />
+         <image mode="widthFix" src="/image/icon/Icon_more.png" />
+         </view>
+    </view>
+    <!-- <view class="recommend-article">
+        <text >+</text>
+        <text bind:tap="gototype" data-typeid="{{item.typeId}}" wx:for='{{markType}}' wx:key=''>{{item.type}}</text>
+        <text >...</text>
+    </view> -->
+</view>
+
+<view class="mag-list">
+
+    <view bind:tap="getArticleId" data-articleid="{{item.id}}" class="mag-article" wx:for="{{articleList}}" wx:key="">
+        <view class="article-title">
+            <image mode="widthFix" src="{{item.markPeopleAvatar}}" />
+            <text >{{item.markPeople}}等{{item.markCount}}人看过此文章</text>
+        </view>
+        <view class="article-pic">
+            <image  mode="widthFix" src="{{item.articleImgSrc}}" />
+            <text class="article-title">{{item.articleTitle}}</text>
+        </view>
+        <view class="article-handle">
+            <text class="deep-read">{{item.publishTime}}</text>
+            <view class="option-control">
+                <image mode="widthFix" data-message="{{item.articleType}}" id="img" bind:tap='getmessage' src="/image/icon/Icon_more.png" />
+                <button open-type="share">
+                    <image mode="widthFix" src="/image/icon/Icon_relay.png" />
+                </button>
+                <view class="like" bind:tap="setlike">
+                 <image data-like="{{index}}" wx:if="{{likelist[index]}}" mode="widthFix" src="/image/icon/Icon_circle_fill.png" />
+                 <image data-like="{{index}}" wx:else mode="widthFix" src="/image/icon/Icon_circle.png" />
+                </view>
+
+            </view>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,6 @@
+function addborder(data){
+    var reg = getRegExp('^','g');
+    var reg1 = getRegExp('$','g')
+   return data.replace(reg,'[').replace(reg1,']')
+}
+module.exports.addborder = addborder;

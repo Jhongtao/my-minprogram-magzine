@@ -1,0 +1,12 @@
+<!--page/page2/page2.wxml-->
+<!-- <text>page/page2/page2.wxml</text> -->
+<view class="contain">
+    <view class="pic-con">
+        <image mode="widthFix" src="/img/ym.png" />
+        <text class="article" >于正发文疑似谈杨幂刘恺威离婚，配文称：“人生如戏，戏如人生，剧情早知道，演到这一幕令人唏嘘”
+        </text>
+    </view>
+    <view class="author">
+        <text>---责编：麦子七</text>
+    </view>
+</view>

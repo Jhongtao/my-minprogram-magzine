@@ -1,0 +1,17 @@
+
+function parseTime(data){
+    // console.log(data)
+    var s = Math.floor(data/60);
+    var m = data - s*60;
+    if(s < 10){
+        s = 0 + '' + s ;
+    }
+    if(m < 10){
+        m = 0  + '' + m;
+    }
+    return s + ':' + m;
+}
+
+module.exports = {
+    parsetime : parseTime
+}

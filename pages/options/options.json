@@ -1,9 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "subscribe-com":"/components/comSubscribe/com",
-    "marktype-list-com":"/components/comMarkList/com",
-    "add-com":"/components/comAdd/com",
-    "search-com":"/components/comSearch/com"
-  }
-}

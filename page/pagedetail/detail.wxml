@@ -1,0 +1,77 @@
+<!--page/pagedetail/detail.wxml-->
+<!-- <text>page/pagedetail/detail.wxml</text> -->
+<wxs src="../../commonwxs/add.wxs" module="add1"></wxs>
+<wxs src="../../commonwxs/parseTime.wxs" module="parse"></wxs>
+<view class="article-contain">
+    <view class="article-title">
+        <text class='title'>{{articleDetail.title}}</text>
+        <button open-type="share">share</button>
+         <view>
+             <text class="author">{{articleDetail.author}}</text>
+             <text class="date">{{add1.addborder(articleDetail.publishTime)}}</text>
+         </view>
+    </view>
+    <view class="media">
+        <swiper wx:if="{{articleDetail.banner[0]}}" class='swiper' indicator-dots="{{true}}" autoplay="{{true}}" interval="{{2000}}" circular="{{true}}">
+            <swiper-item wx:for="{{articleDetail.banner}}">
+                <image src="{{item}}" />
+            </swiper-item>
+        </swiper>
+
+        <video wx:elif="{{articleDetail.video.src}}" id="invideo" src="{{articleDetail.video.src}}" initial-time="{{20}}" duration="100" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls>
+            <cover-view class="coverimg" wx:if="{{isplay}}">
+                <cover-image class="img" src="{{articleDetail.video.poster}}"></cover-image>
+                <cover-view bind:tap="playvideo" class="play">
+                    <cover-image class="playing" src="/image/icon/Icon_play.png"></cover-image>
+                    <cover-view class="time">20'</cover-view>
+                </cover-view>
+            </cover-view>
+        </video>
+
+      <view wx:elif="{{articleDetail.audio.src}}" class="audio">
+         <view class="audioplay" bind:tap="autoPlay">
+             <image wx:if="{{playing}}" src="/image/icon/pause.png" />
+             <image wx:else src="/image/icon/play.png" />
+         </view>
+         <view class="contain">
+             <view class="title">
+                 <text class="songname">{{articleDetail.audio.title}}</text>
+                 <text class="songautor">{{articleDetail.audio.singer}}</text>
+             </view>
+             <view class="pross">
+                 <view class="pre" style="width:{{preWidth}}rpx">
+                     <progress percent="{{process}}" stroke-width="4"/>
+                     <view
+                      bind:touchstart="onstart"
+                      bind:touchmove="onmove"
+                      bind:touchend="onend"
+                      class="percent" style="left:{{left}}rpx"></view>
+                 </view>
+                 <view class="time">
+                     <text class="start">{{parse.parsetime(curtime)}}</text>
+                     <text class="end">{{parse.parsetime(articleDetail.audio.duration)}}</text>
+                 </view>
+             </view>
+         </view>
+      </view>
+
+    </view>
+
+    <view class="detail">
+        <text class="contain" decode="{{true}}">{{articleDetail.content}}</text>
+
+    </view>
+    <view class="readcount">
+        <text >阅读量</text>
+        <text >{{add.addborder(articleDetail.readNum)}}</text>
+    </view>
+</view>
+<wxs module="add">
+ function addborder(data){
+     var reg = getRegExp('^','g');
+     var reg1 = getRegExp('$','g')
+    return data.replace(reg,'[').replace(reg1,']')
+ }
+ module.exports.addborder = addborder;
+</wxs>
+

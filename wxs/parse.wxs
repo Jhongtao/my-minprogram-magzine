@@ -1,6 +1,0 @@
-function parse(str){
-    return parseInt(str)
-}
-module.exports={
-    parse:parse
-};

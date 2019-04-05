@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "search-com":"/components/comSearch/com",
-    "article-list-com":"/components/comArticle/com"
-  }
-}
