@@ -25,7 +25,7 @@ Component({
    */
   data: {
      dateTitle:'',
-     imgLoading:true,
+    //  imgLoading:true,
      weater:'',
      weaterBtn:true
   },
@@ -44,7 +44,7 @@ Component({
         let nowdate = new Date();
         let mounth = nowdate.getMonth();
         let day = nowdate.getDate()
-        return mounthArr[mounth] + dateArr[day+1]
+        return mounthArr[mounth] + dateArr[day - 1]
       },
       _setdateTitle(){
         let id = this.data.magazineId
@@ -53,50 +53,54 @@ Component({
           dateTitle
         })
       },
-      imgLoaded(e){
-        this.setData({
-          imgLoading:false,
-        })
-      },
+      // imgLoaded(e){
+      //   this.setData({
+      //     imgLoading:false,
+      //   })
+      // },
       _getUserInfo(){
         wx.getSetting({
           success:res=>{
             if(res.authSetting['scope.userInfo']){
-              this.setData({
-                weaterBtn:false
+              wx.getUserInfo({
+                success:res=>{
+                    this._setWeather(res)
+           
+                }
               })
             }else{
               this.setData({
                 weaterBtn:true
               })
             }
-              console.log(res.authSetting['scope.userInfo'])
-          }
-        })
-        wx.getUserInfo({
-          success:res=>{
-            const province = provinecslist[res.userInfo.province];
-            const city = citylist[res.userInfo.city];
-            // console.log(province,city)
-            let cityId = null
-            cityIdlist.forEach(item=>{
-              if(item.province === province){
-                item.city.forEach(item=>{
-                  if(item.cityName === city){
-                    cityId = item.cityId
-                  }
-                })
-              }
-            })
-           weaterdata.getWeaterData(cityId).then(res=>{
-             this.setData({
-               weater:res
-             })
-             console.log(this.data.weater)
-           })
-     
           }
         })
       },
+      _setWeather(res){
+        const province = provinecslist[res.userInfo.province];
+        const city = citylist[res.userInfo.city];
+        // console.log(province,city)
+        let cityId = null
+        cityIdlist.forEach(item=>{
+          if(item.province === province){
+            item.city.forEach(item=>{
+              if(item.cityName === city){
+                cityId = item.cityId
+              }
+            })
+          }
+        })
+       weaterdata.getWeaterData(cityId).then(res=>{
+         this.setData({
+           weater:res,
+           weaterBtn:false
+         })
+       })
+      },
+      UserInfo(e){
+        console.log(e)
+        const res = e.detail
+        this._setWeather(res)
+      }
   }
 })

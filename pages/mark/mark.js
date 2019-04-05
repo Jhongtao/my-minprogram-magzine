@@ -20,6 +20,12 @@ Page({
       accredit:true,
     })
   },
+  quit(){
+   this.setData({
+    userInfo:{},
+    accredit:false,
+   })
+  },
   _getAccedit(){
     wx.getSetting({
       success:res=>{

@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "loading-com":"/components/comLoading/com"
+    "loading-com":"/components/comLoading/com",
+    "imgBtn-com":"/components/comBtn/com"
   }
 }

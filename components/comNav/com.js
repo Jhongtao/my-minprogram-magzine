@@ -22,7 +22,7 @@ Component({
   methods: {
      ontapId(e){
           let id = this._parseId(e.target.id);
-          let setId = id>1?this.data.magazineTypeArr.length -1:0;      
+          let setId = id > 1?this.data.magazineTypeArr.length -1:0;      
           this.setData({
             activeId:id,
             magazineId:`magazineId${setId}`
@@ -30,7 +30,7 @@ Component({
           this.triggerEvent('mytap',{data:id},{})
      },
      _parseId(id){
-      return Number(id.match(/\d+/g)[0])
+      return Number(id.match(/\d+$/g)[0])
     },
   }
 })

@@ -4,7 +4,7 @@
 <more-com></more-com>
 <like-com></like-com> -->
 <nav-com catch:mytap="ongetDataList" magazine-type-arr="{{magazineTypeArr}}" class="nav"></nav-com>
-<view hidden="{{loading}}">
+<view>
 <recommend-info-com recommend-info="{{recommendInfo}}" magazine-id="{{magazineId}}" magazine-type-arr="{{magazineTypeArr}}" class="recommend"></recommend-info-com>
 <marktype-list-com mark-type-list="{{markTypeList}}">
         <view slot="first" hidden="{{magazineId !== 0}}">
@@ -19,9 +19,9 @@
              magazine-id="{{magazineId}}" 
              isover="{{isover}}"></article-com>
 </view>
-<view class="loading" hidden="{{!loading}}">
+<!-- <view class="loading" hidden="{{!loading}}">
    <loading-com class="loaded" run="{{false}}"></loading-com>
-</view>
+</view> -->
 <!-- <video-com video-id="{{videoId}}" video-src="{{videoSrc}}" cover-img-src="{{coverImgSrc}}" main-title="{{mainTitle}}"/>
 <nine-img-com main-title="{{mainTitle}}" img-src-arr="{{srcArr}}" img-num="{{srcArr.length}}"/>
 <text-img-com main-title="{{mainTitle}}" sub-title="{{subTitle}}" img-src="{{imgSrc}}" />

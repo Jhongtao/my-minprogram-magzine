@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.1",
+	"libVersion": "2.6.4",
 	"appid": "wx6b17859a7d44f515",
 	"projectname": "rebulid-firstDemo",
 	"debugOptions": {

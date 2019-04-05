@@ -7,6 +7,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
+       isover:Boolean,
        articleList:Array,
        moreArticle:{
          type:String,
@@ -23,6 +24,10 @@ Component({
             isover:false,
             isloading:false,
            })
+           wx.pageScrollTo({
+            scrollTop: 0,
+            // duration: 300
+          })
          }
        },
       //  isover:Boolean,
@@ -147,7 +152,14 @@ Component({
         });
       }
     },
-  
+    test(){
+      // console.log(222)
+    },
+    tolower(){
+      console.log('lower',this.data.isover)
+
+      this._getMoreData()
+    }
   },
  
 

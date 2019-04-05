@@ -2,8 +2,9 @@
 <!-- <text>pages/mark/mark.wxml</text> -->
 <view class="container">
   <view class="user-info">
-     <text class="user-name">{{userInfo.nickName}}</text>
      <view class="user-logo" wx:if="{{accredit}}" >
+      <text class="user-name">{{userInfo.nickName}}</text>
+      <button class="quit" bind:tap="quit">退出</button>
       <image class="image"
       src="{{userInfo.avatarUrl}}"
        />
@@ -24,6 +25,6 @@
   </view>
 
   <view class="mark-list">
-  <mark-article-com article-list="{{markArticleList}}"></mark-article-com>
+  <mark-article-com article-list="{{markArticleList}}" isover="true"></mark-article-com>
   </view>
 </view>

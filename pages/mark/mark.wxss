@@ -13,6 +13,17 @@
     align-items: center;
     padding:20rpx;
 }
+.user-logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.quit{
+    align-self: baseline;
+    height:40rpx;
+    font-size:30rpx;
+    line-height: 40rpx;
+}
 .img-user{
     display:block;
     width:70rpx;

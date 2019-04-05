@@ -5,7 +5,10 @@
      tyoe 2 图文
      type 3 video
      type 4 纯文字-->
-<view class="container" catch:tap="">
+<scroll-view class="container" catch:tap="test"
+ scroll-y="true"
+ bindscrolltolower="tolower"
+>
   <view class="article-list" wx:for="{{articleList}}" wx:key="{{item.artId}}">
     <view class="article-nav">
         <image mode="widthFix" class="image" src="{{item.mark.avatar}}" />
@@ -37,4 +40,4 @@
   <view class="over" hidden="{{!isover}}">
       <text class='text-over'>文章已经没有更多了</text>
   </view>
-</view>
+</scroll-view>
